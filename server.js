@@ -1,15 +1,15 @@
 const express = require("express");
 const cors = require("cors");
-const axios = require("axios"); // To fetch data from the external URL
+const axios = require("axios"); 
 
 const app = express();
 const port = 5000;
 
-// Enable CORS to allow cross-origin requests
-app.use(cors());
-app.use(express.json()); // To parse incoming JSON payloads
 
-// Endpoint to fetch questions from the external API
+app.use(cors());
+app.use(express.json()); 
+
+//  fetch questions from the external API
 app.get("/api/questions", async (req, res) => {
   try {
     // External API URL
@@ -18,10 +18,10 @@ app.get("/api/questions", async (req, res) => {
     // Fetch data from the external API
     const response = await axios.get(externalApiUrl);
 
-    // Assuming the response contains the questions in a 'questions' field
+    
     const questions = response.data.questions;
 
-    // Send the questions data to the frontend
+    // Send the questions data to the quizapp
     res.json({ questions });
   } catch (error) {
     console.error("Error fetching questions:", error);
@@ -29,16 +29,16 @@ app.get("/api/questions", async (req, res) => {
   }
 });
 
-// Endpoint to save the score
+//  score
 app.post("/api/score", async (req, res) => {
   try {
-    // Get the score from the request body
+    
     const { score } = req.body;
 
-    // For now, we just log the score, but you can save it to a database if needed
+    
     console.log("Received score:", score);
 
-    // Respond with a success message
+    
     res.status(200).json({ message: "Score saved successfully", score });
   } catch (error) {
     console.error("Error saving score:", error);

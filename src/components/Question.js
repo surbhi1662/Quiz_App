@@ -3,7 +3,7 @@ import React from "react";
 const Question = ({ question, handleAnswer, timeLeft, score, streak, currentIndex }) => {
   if (!question) return <p>Loading question...</p>;
 
-  // Display question number, adding 1 to the currentIndex for a 1-based index
+ 
   const questionNumber = currentIndex + 1;
 
   return (

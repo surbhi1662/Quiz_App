@@ -1,9 +1,9 @@
-import React, { useState, useEffect, useCallback } from "react";
 import { Howl } from "howler";
+import React, { useCallback, useEffect, useState } from "react";
 import correctSound from "../assets/correct.mp3";
 import wrongSound from "../assets/wrong.mp3";
-import Question from "./Question";
 import "../styles/styles.css";
+import Question from "./Question";
 
 const correctAudio = new Howl({ src: [correctSound] });
 const wrongAudio = new Howl({ src: [wrongSound] });
@@ -22,14 +22,14 @@ const QuizApp = () => {
   const handleNextQuestion = useCallback(() => {
     if (currentIndex < questions.length - 1) {
       setCurrentIndex((prevIndex) => prevIndex + 1);
-      setTimeLeft(10); // Reset timer
+      setTimeLeft(10); 
     } else {
       setQuizCompleted(true);
       saveScore(score);
     }
   }, [currentIndex, questions.length, score]);
 
-  // Fetch questions from backend
+  // Fetch questions from server.js
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
