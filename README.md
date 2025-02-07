@@ -85,7 +85,9 @@ Here is a video walkthrough of the Quiz App:
 
 
 ## Screenshots
-
+![Screenshot 1](public/image/server.png)
+![Screenshot 1](public/image/quizapp.png)
+![Screenshot 1](public/image/question.png)
 ![Screenshot 1](public/image/screenshot1.png)
 ![Screenshot 2](public/image/screenshot2.png)
 ![Screenshot 2](public/image/screenshot3.png)
