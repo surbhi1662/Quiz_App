@@ -1,0 +1,156 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Main Quiz Container */
+.quiz-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(120deg, #6a11cb, #2575fc); /* Smooth gradient for a professional feel */
+    color: #fff;
+}
+
+/* Question Container */
+.question-container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 80%;
+    max-width: 650px;
+    margin-bottom: 20px;
+}
+
+/* Question Title */
+.question-container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ffcc00;
+    font-weight: 700;
+}
+
+/* Answer Option Buttons */
+.option-button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    padding: 15px;
+    margin: 10px;
+    width: 80%;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.option-button:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+    transform: scale(1.05);
+}
+
+.option-button:active {
+    background-color: #388e3c; /* Dark green when clicked */
+}
+
+/* Timer and Score */
+p {
+    font-size: 1.2rem;
+    margin: 5px 0;
+    color: #dfe6e9; /* Light gray for text */
+}
+
+.timer {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #333;
+    border-radius: 8px;
+    color: #fff;
+}
+
+/* Result Container */
+.result {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    max-width: 650px;
+}
+
+.result h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #ffcc00;
+    font-weight: 700;
+}
+
+.result p {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #dfe6e9; /* Light gray text for readability */
+}
+
+.result h2 {
+    font-size: 2rem;
+    color: #4caf50; /* Green color for the badge */
+    font-weight: 600;
+}
+
+.result button {
+    background-color: #003366; /* Darker blue */
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.result button:hover {
+    background-color: #004085; /* Lighter blue on hover */
+    transform: scale(1.1);
+}
+
+/* Loading and Error Styles */
+.loading, .error {
+    font-size: 1.5rem;
+    color: #ffcc00;
+    margin-top: 20px;
+}
+
+/* General Button Styles for Next, Play Again, etc. */
+button {
+    cursor: pointer;
+    border: none;
+    background-color: #004085;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #003366;
+    transform: scale(1.1);
+}
+
+/* Loading Spinner for Quiz Start */
+.loading {
+    font-size: 2rem;
+    color: #ffcc00;
+    margin-top: 20px;
+    text-align: center;
+}
